@@ -30,8 +30,55 @@ img {
 
 }
 
-.but {
+/* .but {
+    display: inline-flex;
+    align-items: center;
     border: 1px solid blueviolet;
     border-radius: 5px;
     background-color: crimson;
+} */
+
+.but-test {
+    position: relative;
+    display: inline-flex;
+    padding: 25px 50px;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+
+}
+
+
+.but-test::before, .but-test::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    transition: transform 3s;
+    transition-delay: 1s;
+    background-position: center;
+    background-size: cover;
+}
+
+.but-test::before {
+    background-image: url(../image/antenna.svg);
+}
+
+.but-test:hover::before {
+    transform: translateY(-55px);
+
+}
+
+.but-test::after {
+    position: absolute;
+    background-image: url(../image/astronaut.svg);
+    transform: translateY(55px);
+    
+}
+
+.but-test:hover::after {
+    transform: translateY(0px);
 }
