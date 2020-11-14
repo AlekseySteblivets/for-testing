@@ -82,3 +82,9 @@ img {
 .but-test:hover::after {
     transform: translateY(0px);
 }
+
+.flex-elements {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
